@@ -19,7 +19,7 @@ MINIMUM_SIZE = QSizePolicy(
 )
 
 ABOUT_TEXT = \
-f"""
+    f"""
 f2k
 --- 
 A simple LaunchPad/Take2Launcher  
@@ -40,6 +40,7 @@ renderers = {
     "DX11": "DirectX 11",
     "DX12": "DirectX 12"
 }
+
 
 class f2kWidget(QWidget):
     def __init__(self):
@@ -175,13 +176,13 @@ class f2kWidget(QWidget):
             errorBox.setFont(QFont('Sans', 10, 500))
             errorBox.setIcon(QMessageBox.Icon.Critical)
             errorBox.setTextFormat(Qt.TextFormat.PlainText)
-            errorBox.setText("Failed to launch\n\n" + 
-                "\n".join(
-                    traceback.format_exception(
-                        type(e), e, e.__traceback__
-                    )
-                )
-            )
+            errorBox.setText("Failed to launch\n\n" +
+                             "\n".join(
+                                 traceback.format_exception(
+                                     type(e), e, e.__traceback__
+                                 )
+                             )
+                             )
             errorBox.addButton(QMessageBox.Ok)
             errorBox.exec()
         self.quit()
@@ -194,7 +195,7 @@ if __name__ == "__main__":
     widget = f2kWidget()
     mainWindow = QMainWindow()
 
-    mainWindow.setFixedSize(400,300)
+    mainWindow.setFixedSize(400, 300)
     mainWindow.setWindowTitle("f2k — Civ VI")
 
     mainWindow.addToolBar(widget.toolBar)
