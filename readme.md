@@ -1,3 +1,6 @@
+# DEPRECATED
+Firaxis removed the 2K Launcher from Civ 6 installs on Aug 15th, 2024.
+
 # f2k
 A simple LaunchPad/Take2Launcher replacement for Civ VI
 
